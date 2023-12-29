@@ -1,0 +1,20 @@
+.nums-container {
+  display: flex;
+  margin: 25px auto;
+  padding: 10px;
+  position: relative;
+  background-color: var(--purple);
+}
+
+.lotto-num {
+  min-width: 55px;
+  height: 100px;
+  background-color: var(--yellow);
+  margin: 15px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-purple);
+  font-size: 2rem;
+  border-radius: 5px;
+}

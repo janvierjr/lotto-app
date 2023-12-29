@@ -2,7 +2,7 @@
   --dark-purple: #25283d;
   --rose-pink: #ff37a6;
   --yellow: #f1d302;
-  --teal: #16f4d0;
+  --purple: #3e4365;
   --off-white: #eafdf8;
 }
 
@@ -14,11 +14,62 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--dark-purple);
+  color: var(--yellow);
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* //////// OVERALL STYLES /////// */
+
+h1 {
+  font-size: 2.35rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+}
+
+button {
+  background-color: var(--rose-pink);
+  border: none;
+  margin: 10px auto;
+  padding: 14px 28px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all ease 200ms;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: var(--off-white);
+  color: var(--dark-purple);
+}
+
+/* //////// TEXT COLOR CLASSES /////// */
+
+.txt-pink {
+  color: var(--rose-pink);
+}
+
+.txt-yellow {
+  color: var(--yellow);
+}
+
+.txt-dark-purple {
+  color: var(--dark-purple);
+}
+
+.txt-white {
+  color: var(--off-white);
+}
+
+.txt-teal {
+  color: var(--teal);
+}
+
 
 
