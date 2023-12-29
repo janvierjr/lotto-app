@@ -1,21 +1,17 @@
-import { range } from 'underscore';
-import './RandomNumbers.css';
+import { RandomLottoAlgo } from '../../utils/helperFunctions';
 
 const RandomNumbers = ({ numPick }) => {
-  /**
-   * pass down number of lotto-nums via props
-   *
-   */
-  const numPickOptions = range(numPick);
-
-  // console.log('numPickOptions', numPickOptions())
-
+  const lotteryNumbersArr = RandomLottoAlgo(numPick);
   return (
     <div className='nums-container'>
-      {numPickOptions.map(num => {
-        return <div key={num} className='lotto-num'>#</div>;
+      {lotteryNumbersArr.map((lottoNum) => {
+        return (
+          <div key={`${lottoNum}`} className='lotto-num'>
+            {' '}
+            {lottoNum}
+          </div>
+        );
       })}
-
     </div>
   );
 };

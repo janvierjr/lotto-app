@@ -13,5 +13,6 @@
 
 .btn-container {
   display: flex;
+  flex-direction: column;
 }
 

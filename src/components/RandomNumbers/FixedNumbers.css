@@ -1,6 +1,8 @@
 .nums-container {
   display: flex;
+  justify-content: center;
   margin: 25px auto;
+  min-width: 475px;
   padding: 10px;
   position: relative;
   background-color: var(--purple);
