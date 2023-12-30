@@ -2,6 +2,7 @@ import './App.css';
 import UserInputs from './components/UserInputs/UserInputs';
 import FixedNumbers from './components/RandomNumbers/FixedNumbers';
 import { useState } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 function App() {
 /**
  * on button click
@@ -70,6 +71,7 @@ function App() {
           )}
         </div>
       </div>
+      <SpeedInsights/>
     </div>
   );
 }

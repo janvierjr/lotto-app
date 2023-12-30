@@ -10,8 +10,8 @@ input {
   padding: 0 5px;
 }
 
-@media screen and (max-width: 400px) {
-  input {
+@media screen and (max-width: 450px)
+{  input {
     min-width: 50px;
   }
 
