@@ -1,4 +1,4 @@
-import { range, random } from 'underscore';
+import { random } from 'underscore';
 
 /**
  *
@@ -7,7 +7,6 @@ import { range, random } from 'underscore';
  */
 
 export function RandomLottoAlgo(num, limit) {
-  console.log('lotto numbers TADA', num, limit);
   const lottoArr = [];
 
   for (let i = 0; i < num; i++) {
