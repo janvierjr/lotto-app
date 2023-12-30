@@ -39,7 +39,6 @@ p {
 }
 
 button {
-  background-color: var(--rose-pink);
   border: none;
   margin: 10px auto;
   padding: 14px 28px;
@@ -81,5 +80,13 @@ button:hover {
   color: var(--red);
 }
 
+/* //////// BG CLASSES /////// */
 
 
+.bg-pink {
+  background-color: var(--rose-pink);
+}
+
+.bg-yellow {
+  background-color: var(--yellow);
+}

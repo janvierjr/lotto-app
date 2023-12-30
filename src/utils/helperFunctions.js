@@ -1,3 +1,4 @@
+import { range, random } from 'underscore';
 
 /**
  *
@@ -5,13 +6,25 @@
  * @returns array with randome lottery numbers
  */
 
-export function RandomLottoAlgo(num) {
-  console.log('lotto numbers TADA', num)
-  const lottoArr = []
+export function RandomLottoAlgo(num, limit) {
+  console.log('lotto numbers TADA', num, limit);
+  const lottoArr = [];
 
-  for (let i = 0; i < num; i++){
-    lottoArr.push(i);
+  for (let i = 0; i < num; i++) {
+    let randomNum = random(1, (limit))
+    lottoArr.push(randomNum);
+
   }
 
-  return lottoArr;
-};
+  // eliminate duplicates by re-running function
+  let sortedLottoArr = lottoArr.slice().sort((a, b) => a - b);
+  for (let i = 0; i < sortedLottoArr.length; i++){
+    if (sortedLottoArr[i + 1] === sortedLottoArr[i]) {
+      return RandomLottoAlgo(num, limit)
+    }
+  }
+
+
+  return sortedLottoArr;
+
+}

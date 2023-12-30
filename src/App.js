@@ -1,6 +1,6 @@
 import './App.css';
 import UserInputs from './components/UserInputs/UserInputs';
-import RandomNumbers from './components/RandomNumbers/FixedNumbers';
+import FixedNumbers from './components/RandomNumbers/FixedNumbers';
 import { useState } from 'react';
 function App() {
 /**
@@ -10,16 +10,22 @@ function App() {
  */
 
   const [numPick, setNumPick] = useState(0);
-  const [numHigh, setNumHigh] = useState(42);
+  const [numLimit, setNumLimit] = useState(42);
   const [numPickError, setNumPickError] = useState(false);
   const [getNumberClicked, setGetNumberClicked] = useState(false);
 
-   const handleNumPickChange = (e) => {
-     setNumPick(e.target.value);
+  const handleNumPickChange = (e) => {
+    if (e.target.value <= 7 && e.target.value > 2) {
+      handleReset();
+      setNumPick(e.target.value);
+     }
    };
 
-  const handleNumHighChange = (e) => {
-    setNumHigh(e.target.value)
+  const handleNumLimitChange = (e) => {
+    if (e.target.value <= 99 && e.target.value > 2) {
+      handleReset();
+      setNumLimit(e.target.value);
+    }
   }
 
   const handleGetLottoNums = () => {
@@ -31,6 +37,10 @@ function App() {
     }
   }
 
+  const handleReset = () => {
+    setGetNumberClicked(false);
+  };
+
   return (
     <div className='App'>
       <h1 className='txt-pink'>
@@ -39,21 +49,24 @@ function App() {
       <div className='container'>
         <UserInputs
           numPick={numPick}
-          numHigh={numHigh}
+          numLimit={numLimit}
           handleNumPickChange={handleNumPickChange}
-          handleNumHighChange={handleNumHighChange}
+          handleNumLimitChange={handleNumLimitChange}
         />
-        <RandomNumbers
+        <FixedNumbers
           numPick={numPick}
-          numHigh={numHigh}
+          numLimit={numLimit}
           getNumberClicked={getNumberClicked}
         />
         <div className='btn-container'>
           <button
-            className='lotto-button txt-white'
+            className='lotto-button txt-white bg-pink'
             onClick={handleGetLottoNums}
           >
             Get My Numbers
+          </button>
+          <button className='lotto-button bg-yellow' onClick={handleReset}>
+            Reset
           </button>
           {numPickError && (
             <p className='txt-red'>Please choose the Number of Picks</p>
