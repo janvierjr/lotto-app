@@ -21,6 +21,7 @@ const UserInputs = ({
           max={7}
           value={numPick}
           type='number'
+          inputMode='numeric'
           onChange={handleNumPickChange}
         ></input>
       </div>
@@ -30,6 +31,7 @@ const UserInputs = ({
           min={1}
           max={99}
           type='number'
+          inputMode='numeric'
           value={numLimit}
           onChange={handleNumLimitChange}
         ></input>
