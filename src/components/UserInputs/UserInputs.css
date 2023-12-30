@@ -9,3 +9,13 @@ input {
   font-size: 1.1rem;
   padding: 0 5px;
 }
+
+@media screen and (max-width: 400px) {
+  input {
+    min-width: 50px;
+  }
+
+    .input-container {
+      padding: 5px 15px;
+    }
+}

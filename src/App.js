@@ -15,17 +15,14 @@ function App() {
   const [getNumberClicked, setGetNumberClicked] = useState(false);
 
   const handleNumPickChange = (e) => {
-    if (e.target.value <= 7 && e.target.value > 2) {
       handleReset();
       setNumPick(e.target.value);
-     }
+
    };
 
   const handleNumLimitChange = (e) => {
-    if (e.target.value <= 99 && e.target.value > 2) {
       handleReset();
-      setNumLimit(e.target.value);
-    }
+      setNumLimit(e.target.value)
   }
 
   const handleGetLottoNums = () => {

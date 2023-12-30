@@ -16,3 +16,12 @@
   flex-direction: column;
 }
 
+@media screen and (max-width: 400px) {
+
+  .App {
+    padding: 0 15px;
+  }
+  .container {
+    max-width: 390px;
+  }
+}

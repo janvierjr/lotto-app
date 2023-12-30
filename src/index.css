@@ -90,3 +90,10 @@ button:hover {
 .bg-yellow {
   background-color: var(--yellow);
 }
+
+/* //////// MEDIA QUERIES /////// */
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 2rem;
+  }
+}

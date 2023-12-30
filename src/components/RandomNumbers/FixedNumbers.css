@@ -20,3 +20,18 @@
   font-size: 2rem;
   border-radius: 5px;
 }
+
+@media screen and (max-width: 400px) {
+  .lotto-num {
+    font-size: 1.5rem;
+  }
+
+  .nums-container {
+    min-width: 370px;
+  }
+
+  .lotto-num {
+    min-width: 45px;
+    height: 75px;
+  }
+}
